@@ -39,7 +39,7 @@ module GreenWorldGateway
                         self.save!
                         return self
                     else
-                        logger.debug verify_result
+                        Rails.logger.debug verify_result if Rails.logger
                     end
                 end
             end

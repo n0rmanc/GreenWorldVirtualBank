@@ -15,9 +15,9 @@ module GreenWorldGateway
                 result.instance_variable_set("@#{split_string[0]}", split_string[1])
                 end
             else
-                logger.debug
+                Rails.logger.debug body if Rails.logger
             end
-            return result body
+            return result
         end
 
         def self.call_back_url
